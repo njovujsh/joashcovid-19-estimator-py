@@ -24,6 +24,9 @@ def test_estimator():
     assert returnedestimate['severeImpact']['casesForVentilatorsByRequestedTime']==11251712 #Should be 11251712
     assert returnedestimate['severeImpact']['dollarsInFlight']==62424498176 #Should be 62424498176
 
+def test_sum():
+    assert sum([1, 2, 3]) == 6, "Should be 6"
+
 if __name__ == "__main__":
-    test_estimator()
+    test_sum()
     print("Everything passed")
