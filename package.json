@@ -16,9 +16,13 @@
       "py"
     ],
     "runner": "<rootDir>/pytest-runner",
-    "testPathIgnorePatterns": ["<rootDir>/audits/test_utils.py"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/audits/test_utils.py"
+    ],
     "testMatch": [
-      "<rootDir>/audits/**/test_*.py"
+      "<rootDir>/audits/**/test_*.py",
+      "<rootDir>/src/test_*.py",
+      "<rootDir>/src/**/test_*.py"
     ]
   },
   "dependencies": {
