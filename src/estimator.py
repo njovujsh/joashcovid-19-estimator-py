@@ -51,5 +51,5 @@ def estimator(data):
   del impact["severeImpact"]
 #   app_json = json.dumps(impact)
   return impact
-testone=estimator(data_jsonx)
-print(testone)
+# testone=estimator(data_jsonx)
+# print(testone)
