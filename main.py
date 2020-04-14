@@ -15,7 +15,7 @@ app = FastAPI()
 
 @app.get("/")
 async def read_root():
-    return RedirectResponse("http://127.0.0.1:8000/redoc")
+    return RedirectResponse("https://covidbackendjoash.herokuapp.com/redoc")
 
 
 @app.post("/api/v1/on-covid-19/")
