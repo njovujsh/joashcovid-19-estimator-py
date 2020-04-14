@@ -3,16 +3,7 @@ import sys
 from src.helpers import timenormaliseday
 
 
-data_json= '"region":{"name":"Africa","avgAge":19.7,"avgDailyIncomeInUSD":4,"avgDailyIncomePopulation":0.73}, "periodType":"days","timeToElapse":38,"reportedCases":2747,"population":92931687,"totalHospitalBeds":678874}'
-
-
-#Json Format Validator
-def validateJSON(jsonData):
-   try:
-      json.loads(jsonData)
-      return jsonData
-   except:
-      return {"data": "Invalid Json Object"}
+data_jsonx =  '{"region":{"name":"Africa","avgAge":19.7,"avgDailyIncomeInUSD":5,"avgDailyIncomePopulation":0.71}, "periodType":"days","timeToElapse":58,"reportedCases":674,"population":66622705,"totalHospitalBeds":1380614}'
 
 def estimator(data):
   data=json.loads(data)
@@ -56,6 +47,5 @@ def estimator(data):
   # app_json = json.dumps(impact)
   # print(app_json)
   return impact
-
-# ename=validateJSON(data_json)
-# print(ename)
+# testone=estimator(data_jsonx)
+# print(testone)
