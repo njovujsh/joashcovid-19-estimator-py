@@ -49,7 +49,7 @@ def estimator(data):
   impact["estimate"] = {'impact':impact['impact'], 'severeImpact':impact['severeImpact']} 
   del impact["impact"]
   del impact["severeImpact"]
-  app_json = json.dumps(impact)
-  return app_json
+#   app_json = json.dumps(impact)
+  return impact
 # testone=estimator(data_jsonx)
 # print(testone)
