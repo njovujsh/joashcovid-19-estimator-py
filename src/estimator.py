@@ -92,6 +92,6 @@ def estimator(data):
   impact['impact']['dollarsInFlight']=int(impact['impact']['infectionsByRequestedTime']*(avgDailyIncomeInUSD*avgDailyIncomePopulation*timeindays))
   impact['severeImpact']['dollarsInFlight']=int(impact['severeImpact']['infectionsByRequestedTime']*(avgDailyIncomeInUSD*avgDailyIncomePopulation*timeindays))
 
-  # app_json = json.dumps(impact)
+  app_json = json.dumps(impact)
   # print(app_json)
-  return impact
+  return app_json

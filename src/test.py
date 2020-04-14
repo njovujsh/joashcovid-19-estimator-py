@@ -1,10 +1,12 @@
 
 # from estimator import sumnumbers
+import json
 from estimator import estimator
 def test_estimator():
     #sample data from sample output
     data_json_sample= '{"region":{"name":"Africa","avgAge":19.7,"avgDailyIncomeInUSD":4,"avgDailyIncomePopulation":0.73}, "periodType":"days","timeToElapse":38,"reportedCases":2747,"population":92931687,"totalHospitalBeds":678874}'
-    returnedestimate=estimator(data_json_sample)
+    data=json.loads(data_json_sample)
+    returnedestimate=estimator(data)
     #These estimates are from a sample output input image
     #For Impact
     assert returnedestimate['impact']['currentlyInfected']==27470 #Should be 27470
