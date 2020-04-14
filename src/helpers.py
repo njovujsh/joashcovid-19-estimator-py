@@ -1,6 +1,6 @@
 import re
 import configparser
-
+import json
 #Normalises days
 def timenormaliseday(periodType,timeToElapse):
   # timevalue
@@ -23,3 +23,8 @@ def read_config():
     config.read('app.properties')
     print("Njovu")
     return config.sections()
+   #  try:
+   #      json.loads(jsonData)
+   #      return True
+   #  except ValueError as err:
+   #      return False
