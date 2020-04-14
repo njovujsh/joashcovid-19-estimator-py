@@ -5,13 +5,13 @@ from fastapi.encoders import jsonable_encoder
 
 from src.estimator import estimator
 from src.models import IntialData
+from src.helpers import read_config
 #from dict to xml
 from dicttoxml import dicttoxml
 #login
 import logging
 # logging.basicConfig(level=logging.INFO, file='src/app.log')
 app = FastAPI()
-logger = logging.getLogger("app")
 
 @app.get("/")
 async def read_root():

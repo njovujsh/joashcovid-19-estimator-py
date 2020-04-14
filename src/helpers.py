@@ -1,4 +1,5 @@
 import re
+import configparser
 
 #Normalises days
 def timenormaliseday(periodType,timeToElapse):
@@ -15,4 +16,10 @@ def timenormaliseday(periodType,timeToElapse):
     elif periodType=="month" or periodType=="months" and len(daysen)!= 0:
        dayvalue=timeToElapse*30 #convert month to days assuming the standard months are 30 
     return dayvalue
-#Challenge 2 function
+
+#Read Settings Files
+def read_config():
+    config = configparser.ConfigParser()
+    config.read('app.properties')
+    print("Njovu")
+    return config.sections()
