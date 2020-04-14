@@ -1,11 +1,14 @@
 import sys
 from src.helpers import timenormaliseday
-# import json
-import simplejson as json
+import json
+# import simplejson as json
 
 
 def estimator(data):
   data=json.loads(data)
+  #twick
+  dataxx = json.dumps(data)
+  data = json.loads(dataxx)
   reportedCases=data["reportedCases"]
   impact= {
   'data':data, #the input data you got
