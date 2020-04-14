@@ -15,3 +15,8 @@ GET  /redoc  200  1001  ms
 GET  /openapi.json  200  27008  ms
 GET  /redoc  200  950  ms
 GET  /openapi.json  200  1000  ms
+GET  /docs  200  998  ms
+GET  /openapi.json  200  23999  ms
+GET  /docs  200  0  ms
+GET  /openapi.json  200  27998  ms
+POST  /api/v1/on-covid-19/json  200  2002  ms
