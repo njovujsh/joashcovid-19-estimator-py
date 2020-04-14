@@ -54,7 +54,7 @@ def estimator_joshua(data):
 
 
 def estimator(data):
-  data=json.loads(data)
+  # data=json.loads(data)
   reportedCases=data["reportedCases"]
   impact= {
   'data':data, #the input data you got
