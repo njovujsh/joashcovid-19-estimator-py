@@ -1,14 +1,12 @@
 import json
 import sys
-from helpers import timenormaliseday
+from src.helpers import timenormaliseday
 
 
 # data_jsonx =  '{"region":{"name":"Africa","avgAge":19.7,"avgDailyIncomeInUSD":5,"avgDailyIncomePopulation":0.71}, "periodType":"days","timeToElapse":58,"reportedCases":674,"population":66622705,"totalHospitalBeds":1380614}'
 
-
-
-def estimator(data_input):
-  data= json.loads(data_input)
+def estimator(data):
+  data=json.loads(data)
   reportedCases=data["reportedCases"]
   impact= {
   'data':data, #the input data you got
@@ -46,11 +44,9 @@ def estimator(data_input):
   impact['impact']['dollarsInFlight']=int(impact['impact']['infectionsByRequestedTime']*(avgDailyIncomeInUSD*avgDailyIncomePopulation*timeindays))
   impact['severeImpact']['dollarsInFlight']=int(impact['severeImpact']['infectionsByRequestedTime']*(avgDailyIncomeInUSD*avgDailyIncomePopulation*timeindays))
 
-  app_json = json.dumps(impact)
+  # app_json = json.dumps(impact)
   # print(app_json)
-  return app_json
+  return impact
 
-
-# estimator(data_jsonx)
 
 # python setup.py install
