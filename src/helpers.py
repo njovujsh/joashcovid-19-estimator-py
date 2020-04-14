@@ -21,7 +21,6 @@ def timenormaliseday(periodType,timeToElapse):
 def read_config():
     config = configparser.ConfigParser()
     config.read('app.properties')
-    print("Njovu")
     return config.sections()
    #  try:
    #      json.loads(jsonData)
