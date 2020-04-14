@@ -1,6 +1,7 @@
 import sys
 from src.helpers import timenormaliseday
-import json
+# import json
+import simplejson as json
 
 
 def estimator(data):
